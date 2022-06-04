@@ -13,6 +13,6 @@ export const Temperature = styled.p`
 
 export const City = styled.p`
   text-align: start;
-  padding-left: 4px;
+  padding-left: 2px;
   margin: 4px 0;
 `;

@@ -7,8 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   min-height: 100%;
-  background: url(https://source.unsplash.com/featured/?nature) no-repeat center
-    center fixed;
+  background: url(https://source.unsplash.com/featured/?nature/2400x1600)
+    no-repeat center center fixed;
   background-size: cover;
   overflow: none;
   color: #f1f1f1;
