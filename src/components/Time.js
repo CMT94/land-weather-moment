@@ -1,12 +1,11 @@
 import React from "react";
-
-import Moment from "react-moment";
-import "moment-timezone";
+import { FadeLoader } from "react-spinners";
 
 import { Welcome, TimeStamp, Greeting } from "./TimeStyles";
 
 const Time = () => {
   const [timeState, setTimeState] = React.useState();
+  const [isLoading, setIsLoading] = React.useState(undefined);
 
   let today = new Date();
 
@@ -23,6 +22,7 @@ const Time = () => {
   };
 
   React.useEffect(() => {
+    setIsLoading(true);
     setInterval(() => {
       const currentDate = new Date();
       setTimeState(
@@ -32,12 +32,18 @@ const Time = () => {
         })
       );
     }, 1000);
+    setIsLoading(false);
   }, []);
 
   return (
     <Welcome>
-      <TimeStamp>{timeState}</TimeStamp>
-      <Greeting>{greeting()}</Greeting>
+      {isLoading && <FadeLoader color="#ffff" />}
+      {!isLoading && (
+        <>
+          <TimeStamp>{timeState}</TimeStamp>
+          <Greeting>{greeting()}</Greeting>
+        </>
+      )}
     </Welcome>
   );
 };

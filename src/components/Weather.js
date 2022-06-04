@@ -34,7 +34,6 @@ const Weather = () => {
     fetch(geoApiUrl)
       .then((response) => response.json())
       .then((data) => {
-        console.log("data=", data.city);
         getWeatherData(data.city);
       });
   };
@@ -59,7 +58,9 @@ const Weather = () => {
       {isLoading && <FadeLoader color="#f1f1f1" />}
       {!isLoading && (
         <>
-          <Temperature>{data.main.temp.toFixed(0)}&#176;</Temperature>
+          <Temperature>
+            <>{data.main.temp.toFixed(0)}&#176;</>
+          </Temperature>
           <City>{data.name}</City>
         </>
       )}

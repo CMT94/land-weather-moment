@@ -5,7 +5,7 @@ export const WeatherContainer = styled.div`
   position: absolute;
 `;
 
-export const Temperature = styled.p`
+export const Temperature = styled.div`
   font-size: 2rem;
   color: #fff;
   margin: 0;
