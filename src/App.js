@@ -5,6 +5,13 @@ import Time from "./components/Time";
 import Weather from "./components/Weather";
 
 function App() {
+  let currentPosition;
+
+  React.useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log(position);
+    });
+  }, []);
   return (
     <div className="App">
       <Weather />

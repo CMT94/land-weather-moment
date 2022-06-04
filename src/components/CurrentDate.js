@@ -1,9 +1,14 @@
 import React from "react";
+import { DateContainer } from "./DateStyles";
 
 const CurrentDate = () => {
   let today = new Date();
   let date = today.toLocaleDateString("fr");
-  return <div>{date}</div>;
+  return (
+    <DateContainer>
+      <p>{date}</p>
+    </DateContainer>
+  );
 };
 
 export default CurrentDate;
