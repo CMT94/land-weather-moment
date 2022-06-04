@@ -6,6 +6,8 @@ import "moment-timezone";
 import { Welcome, TimeStamp, Greeting } from "./TimeStyles";
 
 const Time = () => {
+  const [timeState, setTimeState] = React.useState();
+
   let today = new Date();
 
   let greeting = () => {
@@ -19,11 +21,22 @@ const Time = () => {
       return "Hi !";
     }
   };
+
+  React.useEffect(() => {
+    setInterval(() => {
+      const currentDate = new Date();
+      setTimeState(
+        currentDate.toLocaleTimeString("fr", {
+          hour: "2-digit",
+          minute: "2-digit",
+        })
+      );
+    }, 1000);
+  }, []);
+
   return (
     <Welcome>
-      <TimeStamp>
-        <Moment format="hh:mm"></Moment>
-      </TimeStamp>
+      <TimeStamp>{timeState}</TimeStamp>
       <Greeting>{greeting()}</Greeting>
     </Welcome>
   );
