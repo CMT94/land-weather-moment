@@ -1,9 +1,9 @@
 import React from "react";
 
-import CurrentDate from "./components/CurrentDate";
-import Quote from "./components/Quote";
-import Time from "./components/Time";
-import Weather from "./components/Weather";
+import Weather from "./components/WeatherComponent/Weather";
+import Time from "./components/TimeComponent/Time";
+import CurrentDate from "./components/DateComponent/CurrentDate";
+import Quote from "./components/QuoteComponent/Quote";
 
 function App() {
   return (
