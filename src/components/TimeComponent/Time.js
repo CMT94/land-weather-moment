@@ -1,4 +1,5 @@
 import React from "react";
+
 import { FadeLoader } from "react-spinners";
 
 import { Welcome, TimeStamp, Greeting } from "./TimeStyles";
