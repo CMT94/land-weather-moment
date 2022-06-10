@@ -15,8 +15,10 @@ const Time = () => {
       return "Good Morning";
     } else if (today.getHours() >= 13 && today.getHours() <= 17) {
       return "Good Afternoon";
-    } else if (today.getHours() >= 18 && today.getHours() <= 4) {
+    } else if (today.getHours() >= 18 && today.getHours() <= 20) {
       return "Good Evening";
+    } else if (today.getHours() >= 21 && today.getHours() <= 4) {
+      return "Good Night";
     } else {
       return "Hi !";
     }

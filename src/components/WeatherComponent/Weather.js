@@ -26,6 +26,7 @@ const Weather = () => {
         console.log(error);
       });
   };
+
   const success = (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
